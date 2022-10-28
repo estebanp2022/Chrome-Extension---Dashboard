@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: "Eczar", serif;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 20px #aaaaaa;
+}
+
+main {
+  padding: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crypto-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.crypto-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin: 0;
+}
+
+.logo-name {
+  display: flex;
+}
+
+.crypto-icon {
+  order: -1;
+  padding-right: 10px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.date,
+.time {
+  margin: 0;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.author {
+  font-size: 16px;
+}
+.weather-container,
+.price {
+  font-size: 25px;
+}
+
+.icon-temp {
+  display: flex;
+  align-items: center;
+}
