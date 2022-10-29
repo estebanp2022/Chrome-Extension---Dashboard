@@ -4,18 +4,19 @@
 
 body {
   margin: 0 auto;
+  width: 100%;
   font-size: 40px;
-  font-family: "Eczar", serif;
+  font-family: "Syne", sans-serif;
   background: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  text-shadow: 0px 0px 20px #aaaaaa;
+  text-shadow: 0px 0px 20px #333131;
 }
 
-main {
+.container {
   padding: 30px;
   height: 100vh;
   display: flex;
@@ -23,42 +24,46 @@ main {
   justify-content: space-between;
 }
 
+.left,
+.right {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
 .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.crypto-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.crypto-name {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.price {
-  margin: 0;
-}
-
-.logo-name {
-  display: flex;
-}
-
-.crypto-icon {
-  order: -1;
-  padding-right: 10px;
-}
-
-.date-time {
+.center {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.right {
+  align-items: flex-end;
+  line-height: 0;
+}
+
+.date-container {
+  margin-bottom: 30px;
+}
+
+.quote {
+  font-size: 20px;
   text-transform: uppercase;
+}
+
+.quote-author,
+.author {
+  font-size: 18px;
+}
+
+.city {
+  font-size: 25px;
 }
 
 .date,
@@ -68,19 +73,7 @@ main {
 
 .weather-container {
   display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
-.author {
-  font-size: 16px;
-}
-.weather-container,
-.price {
-  font-size: 25px;
-}
-
-.icon-temp {
-  display: flex;
+  flex-direction: row;
   align-items: center;
+  font-size: 25px;
 }

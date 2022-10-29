@@ -13,26 +13,6 @@ fetch(
   })
   .catch((err) => {});
 
-// API to get bitcoin data and render on screen
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    document.querySelector(
-      ".crypto-icon"
-    ).innerHTML = `<img src="${data.image.thumb}">`;
-    document.querySelector(".crypto-name").textContent = data.name;
-    document.querySelector(".current-price").textContent = `Current:
-      $${data.market_data.current_price.usd}`;
-    document.querySelector(".high-price").textContent = `High: 
-      $${data.market_data.high_24h.usd}`;
-    document.querySelector(".low-price").textContent = `Low: 
-      $${data.market_data.low_24h.usd}`;
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
 // function to render time on screen
 setInterval(function () {
   let today = new Date();
@@ -66,3 +46,15 @@ navigator.geolocation.getCurrentPosition((position) => {
     })
     .catch((err) => console.log(err));
 });
+
+//API to generate random quote
+fetch("https://quotes.rest/qod?language=en")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    document.querySelector(".quote").textContent = `"
+      ${data.contents.quotes[0].quote}"
+      `;
+    document.querySelector(".quote-author").textContent =
+      data.contents.quotes[0].author;
+  });
