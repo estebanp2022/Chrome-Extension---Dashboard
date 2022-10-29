@@ -8,6 +8,12 @@
 
 ## Overview
 
+### Making use of API calls to implement a personal dashboard in the shape of a Chrome extension.
+
+- Geolocation to set the current weather conditions/city of user from OpenWeather API
+- Interactive background image that changes automatically everytime user launches dashboard from Unsplash API
+- Daily inspirational quote from They Say So Quotes API
+
 ### Screenshot
 
 ![](./images/screenshot.png)
